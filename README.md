@@ -17,7 +17,7 @@ Part 2
 
 Создать для этой фукнции функцию Preview, чтобы можно было смотреть на результат.
 
-<img src="https://github.com/makzimi/abocha_android_basic_single_activity_fragments/blob/main/captures/custom_layout.png?raw=true)" width="550" />
+<img src="https://github.com/makzimi/otus-compose-hw/blob/main/captures/custom_layout.png?raw=true" width="550" />
 
 ### Original source
 https://github.com/google-developer-training/android-basics-kotlin-cupcake-app
