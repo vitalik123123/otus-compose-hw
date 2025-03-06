@@ -16,14 +16,20 @@
 package com.example.cupcake
 
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
 
 /**
  * Activity for cupcake order flow.
  */
+const val COLUMNS = 5
+
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var navController: NavController
@@ -32,11 +38,59 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onCreate(savedInstanceState)
 
         // Retrieve NavController from the NavHostFragment
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+//        navController = navHostFragment.navController
 
         // Set up the action bar for use with the NavController
-        setupActionBarWithNavController(navController)
+//        setupActionBarWithNavController(navController)
+        setContent {
+            val width = resources.displayMetrics.run { widthPixels / density }
+            val size = width.div(COLUMNS).dp
+            CustomLayout(
+                COLUMNS
+            ) {
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+                Image(
+                    modifier = Modifier.size(size),
+                    painter = painterResource(R.drawable.cupcake),
+                    contentDescription = ""
+                )
+            }
+        }
     }
 
     /**

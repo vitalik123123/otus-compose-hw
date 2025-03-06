@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.compose)
 }
 
 android {
@@ -55,4 +56,14 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.google.material)
     implementation(libs.kotlin.stdlib)
+    implementation(libs.compose.activity)
+    implementation(libs.compose.material3)
+    implementation(platform(libs.compose.bom))
+    runtimeOnly(libs.compose.animation)
+    runtimeOnly(libs.compose.foundation)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.graphics)
+    implementation(libs.compose.tooling.preview)
+    implementation(libs.compose.tooling)
+    implementation(libs.compose.livedata)
 }
